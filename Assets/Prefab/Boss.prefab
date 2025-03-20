@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4786241793712898920}
   - component: {fileID: 1514368249932872141}
   - component: {fileID: 9188468596067474074}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image_HPBarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,11 +65,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 895862402298013094}
   - component: {fileID: 8458150729832202043}
   - component: {fileID: 8447652072820013337}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image_HPBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,11 +140,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 3735746092560960882}
   - component: {fileID: 2510188899857706075}
   - component: {fileID: 5531555902722249214}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Text_DamageText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 100078015286978704}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HitParticleTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 4785068629847798320}
   - component: {fileID: 3806844388551112276}
   - component: {fileID: 8423034200920102330}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6573425136325756060}
   - component: {fileID: 982130792631377604}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite_EnemySprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 103063719265764177}
   - component: {fileID: 3560035186436864449}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: UI_HPBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 8798945409146567764}
   - component: {fileID: 4630273557297390440}
   - component: {fileID: 4039307593064629523}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,6 +661,10 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4142424968565045759, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7226583673155636400, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -668,6 +672,10 @@ PrefabInstance:
     - target: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
       propertyPath: m_Name
       value: Hit_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7226583673155636402, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -720,6 +728,10 @@ PrefabInstance:
     - target: {fileID: 7226583673972990080, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226583673972990095, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

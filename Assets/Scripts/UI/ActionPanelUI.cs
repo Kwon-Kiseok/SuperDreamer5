@@ -31,9 +31,21 @@ public class ActionPanelUI : MonoBehaviour
 
     private SubPanelState _currentSubPanelState = SubPanelState.None;
 
+    private SpellSpawner _spellSpawner; 
+
+    [Inject]
+    public void Inject(SpellSpawner spellSpawner)
+    {
+        _spellSpawner = spellSpawner;
+    }
+
     void Start()
     {
         _originRectTransformPosition = _actionUITransform.anchoredPosition;
+
+        SpellCreateBtn.onClick.AddListener(() => {
+            _spellSpawner.SpawnSpell();
+        });
 
         HuntingBtn.onClick.AddListener(() => {
             if(_currentSubPanelState != SubPanelState.Hunting)

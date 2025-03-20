@@ -1,0 +1,7 @@
+ID,Name,Grade,Damage,Cooldown,Type,Element
+1001,SandPistol,Normal,200,0.7,Melee,Stone
+1002,StonePunch,Rare,300,1.5,Melee,Stone
+2001,Fireball,Normal,300,1.25,Ranged,Fire
+2002,FireStrike,Rare,500,5,Ranged,Fire
+3001,WaterSpear,Normal,100,0.5,Ranged,Water
+3002,IceBlast,Rare,250,1,Ranged,Water

@@ -15,7 +15,7 @@ public class LaneSpawner : MonoBehaviour
 
     [Inject] private DiContainer _container;
 
-    void Start()
+    void Awake()
     {
         SpawnLanes();
         SetPlayerLane();

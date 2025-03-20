@@ -118,6 +118,15 @@ public class EnemyController : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Spell spell = collision.GetComponent<Spell>();
+        if(spell != null)
+        {
+            TakeDamage(spell.StatData.damage);
+        }
+    }
+
     void Oestroy()
     {
         _cts?.Cancel();        
