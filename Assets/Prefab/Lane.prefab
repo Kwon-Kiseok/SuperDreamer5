@@ -49,7 +49,7 @@ MonoBehaviour:
   _spawnPoint: {fileID: 8660717667748579288}
   _targetPoint: {fileID: 7211878229803241930}
   _spawnTransform: {fileID: 3959641650287430970}
-  _spawnIntervalTime: 0.5
+  _spawnIntervalTime: 1
   _initialDelayTime: 5
 --- !u!1 &1722308301245254729
 GameObject:

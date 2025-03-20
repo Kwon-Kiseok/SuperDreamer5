@@ -24,6 +24,11 @@ public class ActionPanelUI : MonoBehaviour
     [SerializeField] private Button EnhancedBtn;
     [SerializeField] private Button MiningBtn;
 
+    [SerializeField] private GameObject HuntingPanel;
+    [SerializeField] private GameObject GodsuPanel;
+    [SerializeField] private GameObject EnhancedPanel;
+    [SerializeField] private GameObject MiningPanel;
+
     [SerializeField] private TextMeshProUGUI _spellSpawnCostText;
 
     private Vector3 _originRectTransformPosition;
@@ -73,10 +78,12 @@ public class ActionPanelUI : MonoBehaviour
                 if(_isUpPanel)
                 {
                     // active hunting panel
+                    HuntingPanel.gameObject.SetActive(true);
                 }
                 else
                 {
                     UpMoveActivePanel();
+                    HuntingPanel.gameObject.SetActive(true);
                 }
                 _currentSubPanelState = SubPanelState.Hunting;
             }
@@ -92,10 +99,12 @@ public class ActionPanelUI : MonoBehaviour
                 if (_isUpPanel)
                 {
                     // active Godsu panel
+                    GodsuPanel.gameObject.SetActive(true);
                 }
                 else
                 {
                     UpMoveActivePanel();
+                    GodsuPanel.gameObject.SetActive(true);
                 }
                 _currentSubPanelState = SubPanelState.Godsu;
             }
@@ -112,10 +121,12 @@ public class ActionPanelUI : MonoBehaviour
                 if (_isUpPanel)
                 {
                     // active Enhanced panel
+                    EnhancedPanel.gameObject.SetActive(true);
                 }
                 else
                 {
                     UpMoveActivePanel();
+                    EnhancedPanel.gameObject.SetActive(true);
                 }
                 _currentSubPanelState = SubPanelState.Enhanced;
             }
@@ -132,10 +143,12 @@ public class ActionPanelUI : MonoBehaviour
                 if (_isUpPanel)
                 {
                     // active Mining panel
+                    MiningPanel.gameObject.SetActive(true);
                 }
                 else
                 {
                     UpMoveActivePanel();
+                    MiningPanel.gameObject.SetActive(true);
                 }
                 _currentSubPanelState = SubPanelState.Mining;
             }
@@ -157,5 +170,14 @@ public class ActionPanelUI : MonoBehaviour
         _actionUITransform.DOAnchorPosY(_originRectTransformPosition.y, _moveDuration).SetEase(Ease.OutBack);
         _isUpPanel = false;
         _currentSubPanelState = SubPanelState.None;
+
+        if(HuntingPanel.gameObject.activeSelf)
+            HuntingPanel.gameObject.SetActive(false);
+        if (GodsuPanel.gameObject.activeSelf)
+            GodsuPanel.gameObject.SetActive(false);
+        if (EnhancedPanel.gameObject.activeSelf)
+            EnhancedPanel.gameObject.SetActive(false);
+        if (MiningPanel.gameObject.activeSelf)
+            MiningPanel.gameObject.SetActive(false);
     }
 }
