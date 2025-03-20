@@ -9,14 +9,16 @@ public class Units : MonoBehaviour
         public int atk;
         public int def;
         public int speed;
+        public int huntGold;
 
-        public UnitStatData(string name, int maxHp, int atk, int def, int speed)
+        public UnitStatData(string name, int maxHp, int atk, int def, int speed, int huntGold)
         {
             this.name = name;
             this.maxHp = maxHp;
             this.atk = atk;
             this.def = def;
             this.speed = speed;
+            this.huntGold = huntGold;
         }
     }
 

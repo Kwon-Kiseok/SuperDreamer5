@@ -1,4 +1,4 @@
-ID,Name,MAXHP,ATK,DEF,SPEED
-1001,Goblin,50,1,1,1
-1002,Skeleton,3000,5,3,1
-1003,Mushroom,7,7,7,1
+ID,Name,MAXHP,ATK,DEF,SPEED,GOLD
+1001,Goblin,50,1,1,1,4
+1002,Skeleton,3000,5,3,1,10
+1003,Mushroom,7,7,7,1,100

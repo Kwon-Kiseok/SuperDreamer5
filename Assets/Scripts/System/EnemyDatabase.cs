@@ -24,8 +24,9 @@ public class EnemyDatabase
             int dAtk = (int)dataList[i]["ATK"];
             int dDef = (int)dataList[i]["DEF"];
             int dSpeed = (int)dataList[i]["SPEED"];
+            int dGold = (int)dataList[i]["GOLD"];
 
-            Units.UnitStatData enemyData = new Units.UnitStatData(dName, dMaxHp, dAtk, dDef, dSpeed);
+            Units.UnitStatData enemyData = new Units.UnitStatData(dName, dMaxHp, dAtk, dDef, dSpeed, dGold);
             _enemyStatDataDictionary.Add(dataID, enemyData);
             _enemyKeyList.Add(dataID);
         }

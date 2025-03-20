@@ -114,6 +114,8 @@ public class EnemyController : MonoBehaviour
         _isAttacking = false;
         _enemyData.SetAlive(false);
 
+        CurrenyManager.Instance?.AddGold(_enemyData.StatData.huntGold);
+
         await UniTask.Delay((int)(_deathDelay * 1000), cancellationToken: _cts.Token);
         Destroy(gameObject);
     }

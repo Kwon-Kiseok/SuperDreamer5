@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
+using TMPro;
 using Zenject;
 using DG.Tweening;
 
@@ -23,6 +24,8 @@ public class ActionPanelUI : MonoBehaviour
     [SerializeField] private Button EnhancedBtn;
     [SerializeField] private Button MiningBtn;
 
+    [SerializeField] private TextMeshProUGUI _spellSpawnCostText;
+
     private Vector3 _originRectTransformPosition;
     [SerializeField] private float _panelMoveDistance = 160f;
     [SerializeField] private float _moveDuration = 0.5f;
@@ -43,8 +46,25 @@ public class ActionPanelUI : MonoBehaviour
     {
         _originRectTransformPosition = _actionUITransform.anchoredPosition;
 
+        if (CurrenyManager.Instance != null)
+        {
+            CurrenyManager.Instance.CurrenntGold.Subscribe((int goldAmount) =>
+            {
+                if(_spellSpawner.SpellSpawnCostGold > goldAmount)
+                {
+                    _spellSpawnCostText.color = Color.red;
+                }
+                else
+                {
+                    _spellSpawnCostText.color = Color.gray;
+                }
+            }).AddTo(this);
+        }
+
         SpellCreateBtn.onClick.AddListener(() => {
             _spellSpawner.SpawnSpell();
+
+            _spellSpawnCostText.text = _spellSpawner.SpellSpawnCostGold.ToString();
         });
 
         HuntingBtn.onClick.AddListener(() => {

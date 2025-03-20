@@ -62,6 +62,18 @@ public class SpellDatabase
         return spellList[0];
     }
 
+    public Spell.SpellStatData GetCombineSpell(Spell.SpellGrade spellGrade)
+    {
+        Spell.SpellGrade upgrade = spellGrade + 1;
+
+        if (_spellsByGrade.TryGetValue(upgrade, out List<Spell.SpellStatData> spellList) && spellList.Count > 0)
+        {
+            return spellList[UnityEngine.Random.Range(0, spellList.Count)];
+        }
+
+        return spellList[0];
+    }
+
     private Spell.SpellGrade GetRandomGrade()
     {
         float totalWeight = _gradeRateDictionary.Values.Sum();
